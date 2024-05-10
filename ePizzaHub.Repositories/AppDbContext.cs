@@ -32,7 +32,7 @@ namespace ePizzaHub.Repositories
             //needed for migration
             if (!optionsBuilder.IsConfigured)
             {               
-                optionsBuilder.UseSqlServer(@"data source=.;initial catalog=PizzaHubSiteDB;integrated security=true");
+                optionsBuilder.UseSqlServer("server=.;database=PizzaHubSiteDB;integrated security=true;TrustServerCertificate=True;");
             }
             base.OnConfiguring(optionsBuilder);
         }
